@@ -1,0 +1,82 @@
+/* Medidas e cores do Guia de Marca (docs/brand). Não trocar as cores entre si nem a fonte. */
+:host {
+  --bl-sym-bg: #0C4C38;
+  --bl-sym-border: transparent;
+  --bl-sym-s: #FFFFFF;
+  --bl-sym-dot: #6FCFB0;
+  --bl-sua: #0C4C38;
+  --bl-op: #171717;
+  --bl-dot: #0C4C38;
+  --bl-wm-size: var(--bl-size);
+
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+}
+
+:host(.bl-lockup-vertical) {
+  flex-direction: column;
+  gap: calc(var(--bl-size) * 0.22);
+  --bl-wm-size: calc(var(--bl-size) * 0.406);
+}
+
+:host(.bl-tone-mono-ink) {
+  --bl-sym-bg: transparent;
+  --bl-sym-s: #171717;
+  --bl-sym-dot: #171717;
+  --bl-sua: #171717;
+  --bl-op: #171717;
+  --bl-dot: #171717;
+}
+
+:host(.bl-tone-mono-white) {
+  --bl-sym-bg: transparent;
+  --bl-sym-s: #FFFFFF;
+  --bl-sym-dot: #FFFFFF;
+  --bl-sua: #FFFFFF;
+  --bl-op: #FFFFFF;
+  --bl-dot: #FFFFFF;
+}
+
+/* Fundo escuro: menta + #EDEDED; símbolo em grafite com borda. */
+:host(.bl-tone-dark) {
+  --bl-sym-bg: #1A1A1A;
+  --bl-sym-border: #242424;
+  --bl-sym-s: #EDEDED;
+  --bl-sym-dot: #6FCFB0;
+  --bl-sua: #6FCFB0;
+  --bl-op: #EDEDED;
+  --bl-dot: #6FCFB0;
+}
+
+.bl-wordmark {
+  font-size: var(--bl-wm-size);
+  letter-spacing: -0.045em;
+}
+
+.bl-sua { font-weight: 600; color: var(--bl-sua); }
+.bl-op { font-weight: 800; color: var(--bl-op); }
+.bl-wordmark .bl-dot { font-weight: 800; color: var(--bl-dot); }
+
+.bl-symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: var(--bl-size);
+  height: var(--bl-size);
+  padding-bottom: calc(var(--bl-size) * 0.083);
+  border-radius: 22%;
+  border: 1px solid var(--bl-sym-border);
+  background: var(--bl-sym-bg);
+  color: var(--bl-sym-s);
+  font-size: calc(var(--bl-size) * 0.625);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  flex-shrink: 0;
+}
+
+.bl-symbol .bl-dot { color: var(--bl-sym-dot); }
